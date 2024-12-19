@@ -4,28 +4,4 @@
   max-width: 1308px;
 }
 
-.team-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
 
-.navigation-arrows {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.nav-button {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-  color: #333;
-}
-
-.nav-button:hover {
-  background-color: rgba(255, 255, 255, 1);
-}

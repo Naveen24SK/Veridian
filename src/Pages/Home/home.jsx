@@ -5,17 +5,21 @@ import About from '../../Components/AboutUs/about';
 import Footer from '../../Components/Footer/footer';
 import Contact from '../../Components/ContactUs/contact';
 
-const Home = ()=>{
+const Home = () => {
     return (
-        <div>
-            <Topbar />
-            <Hero />
-            <h1>Welcome to our Home Page!</h1>
-            <About />
-            <Contact />
-            <Footer />
+      <div>
+        <Topbar />
+        <Hero />
+        <div id="aboutus">
+          <About />
         </div>
+        <div id="contactus">
+          <Contact />
+        </div>
+        <Footer />
+      </div>
     );
-};
-
-export default Home;
+  };
+  
+  export default Home;
+  

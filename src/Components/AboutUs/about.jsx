@@ -2,12 +2,13 @@ import React from "react";
 import { Box, Typography, Paper } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
-import { StyledBox, AboutBox, FeatureCard, ContentBox, IconWrapper, SectionTitle, SectionText  } from "./about.styles";
+import { StyledBox, Heading, AboutBox, FeatureCard, ContentBox, IconWrapper, SectionTitle, SectionText  } from "./about.styles";
 import logo from "../../assets/aboutlogo.svg";
 import excel from "../../assets/exce.svg";
 import sustain from "../../assets/sust.svg";
 import init from "../../assets/init.svg";
 import integ from "../../assets/integ.svg";
+import grad from "../../assets/pattern.svg";
 import Investment from "../Investment/investment";
 // import OurTeam from "../OurTeam/Team";
 import Slide from "../../Components/OurTeam/SlideCard";
@@ -75,19 +76,18 @@ Veridian's expertise is delivered with a responsible approach to our business, o
   return (
     <Box sx={rect}>
     <StyledBox>
-
-      <Typography
+    <img src={grad} alt="gradient" className="grad" />
+      <Heading
         gutterBottom
-        sx={{ textAlign: "center", color: "#091B29", fontWeight: 700, fontSize: "42px" }}
       >
         About Us
-      </Typography>
+      </Heading>
     
     <Box  >
-      <Grid container padding={" 0px 94px"} spacing={2} >
+      <Grid container padding={" 0px 94px"} spacing={2} sx={grid}>
         <Grid item xs={12} md={12} width={100} display={"flex"} justifyContent={"center"}>
           <AboutBox>
-            <img src={icons.logo} alt="Logo" width={350} height={200} style={{marginLeft:'48px', marginRight:'31px', }} />
+            <img src={icons.logo} alt="Logo" width={350} height={200} style={{marginLeft:'48px', marginRight:'11px', }} />
             <Typography variant="body1" marginRight={'48px'} >
               {gridItems[0].description}
             </Typography>
@@ -98,28 +98,28 @@ Veridian's expertise is delivered with a responsible approach to our business, o
           <Grid item xs={12} md={6} key={item.id} display={"flex"} justifyContent={"center"}>
               <FeatureCard display="flex" flexDirection="row" alignItems="center">
                 <Box>
-                <SectionTitle
-                  variant="h6"
-                  sx={{ fontWeight: "bold", marginTop: 1 }}
-                >
+                <SectionTitle>
                   {item.title}
                 </SectionTitle>
                 <SectionText
-                  variant="body2"
+                  variant="body1"
                   sx={{ marginTop: 1 }}
                 >
                   {item.description}
                 </SectionText>
                 </Box>
-                <img src={icons[item.icon]} alt={item.title} height={104} style={{marginLeft:'18px', marginRight:'18px', }} />
+                <img src={icons[item.icon]} alt={item.title} height={104} style={{marginLeft:'18px' }} />
               </FeatureCard>
           </Grid>
         ))}
       </Grid>
       </Box>
+      <div id="ourteam">
       <Slide />
-      {/* <OurTeam /> */}
+      </div>
+      <div id="investmentapproach">
       <Investment />
+      </div>
       </StyledBox>
     </Box>
   );
@@ -131,5 +131,9 @@ const rect = {
     justifyContent: 'center',
     color: '#FFFFFF',
 };
+
+const grid = {
+  position: 'sticky',
+}
 
 export default About;

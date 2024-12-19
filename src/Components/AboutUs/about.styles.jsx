@@ -11,7 +11,19 @@ const StyledBox = styled(Box)(({ theme }) => ({
     backgroundColor: '#d9eee9',
     paddingBottom: '50px',
     paddingTop: '48px',
+    '.grad': {
+        position: 'absolute',
+        maxWidth: '100%',
+        zIndex: 1,
+        top: 745
+    },
 }));
+
+const Heading = styled(Typography)(({theme})=>({
+    ...theme.typography.h4,
+    color: "#091B29",
+    marginBottom: '24px',
+}))
 
 const AboutBox = styled(Card)(({theme})=>({
     display: 'flex',
@@ -22,6 +34,8 @@ const AboutBox = styled(Card)(({theme})=>({
     height: '296px',
     textAlign: 'left',
     borderRadius: 0,
+    color: '#51585E',
+    ...theme.typography.body1,
 }));
 
 const FeatureCard = styled(Card)(({theme})=>({
@@ -57,17 +71,18 @@ const IconWrapper = styled(Box)(({ theme }) => ({
 }));
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
-    fontWeight: 500,
-    fontSize: '18px',
+    color: '#091B29',
     marginBottom: '8px',
     textAlign: 'left',
+    ...theme.typography.subH3,
 }));
 
 const SectionText = styled(Typography)(({ theme }) => ({
     fontSize: '14px',
     color: '#555',
     textAlign: 'justify',
+    ...theme.typography.body1,
 }));
 
 
-export { StyledBox, AboutBox, ContentBox, IconWrapper, SectionTitle, SectionText, FeatureCard  };
+export { StyledBox, Heading, AboutBox, ContentBox, IconWrapper, SectionTitle, SectionText, FeatureCard  };

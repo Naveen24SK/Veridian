@@ -20,8 +20,6 @@ const StyledButton = styled(Button)(({ theme }) => ({
 }));
 
 const StyledBox = styled(Box)(({ theme }) => ({
-    height: '540px',
-    width: '1308px',
     marginTop: '64px',
     position: 'relative',
     display: 'flex',
@@ -31,12 +29,14 @@ const StyledBox = styled(Box)(({ theme }) => ({
     '.rect-image': {
         position: 'relative',
         zIndex: 1,
+        maxWidth: '100%',
     },
     '.grad-image': {
         position: 'absolute',
         top: 0,
         height: '100%',
         zIndex: 2,
+        maxWidth: '100%',
     },
     '.grad1': {
         left: '0%',
@@ -74,7 +74,6 @@ const CenteredContent = styled(Box)(({ theme }) => ({
 const HeadingCenter = styled(Typography)(({ theme }) => ({
     color: "#F5F7FA",
     fontSize: "48px",
-    fontWeight: 700,
     ...theme.typography.h2
   }));
 

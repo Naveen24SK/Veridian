@@ -16,15 +16,14 @@ export const StyledBox = styled(Box)(({ theme }) => ({
 }));
 
 export const StyledButton = styled(Button)(({ theme }) => ({
-  fontSize: '18px',
-  fontWeight:500,
   margin: '0 8px',
   color:'#51585E',
   textTransform: 'none',
+  ...theme.typography.subH3,
 
-  // '&:hover': {
-  //   borderBottom:'2px solid #009065',
-  // },
+  '&:hover': {
+    borderBottom:'4px solid #009065',
+  },
 }));
 
 export const StyledContainer = styled(Container)(({ theme }) => ({

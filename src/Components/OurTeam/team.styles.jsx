@@ -1,12 +1,21 @@
 import { styled } from '@mui/material/styles';
-import { Box, Typography } from '@mui/material';
-import zIndex from '@mui/material/styles/zIndex';
+import { Box, Typography, IconButton } from '@mui/material';
 
+const MainBox = styled(Box)(({theme})=>({
+    position: "relative",
+    margin: '0 auto',
+    maxwWidth: '1308px',
+}));
+
+const Heading = styled(Typography)(({theme})=>({
+    ...theme.typography.h4,
+    color: '#091B29',
+    marginTop: '50px',
+}));
 
 const SlideBox = styled(Box)(({ theme }) => ({
     height: '540px',
     width: '1308px',
-    marginTop: '64px',
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
@@ -37,7 +46,7 @@ const SlideBox = styled(Box)(({ theme }) => ({
 
 const SlideText = styled(Typography)(({ theme }) => ({
     position: 'absolute',
-    top: 100,
+    top: 90,
     color: '#717B85',
     fontSize: '16px',
     textAlign: 'left',
@@ -68,4 +77,28 @@ const RoleText = styled(Typography)(({theme})=>({
     ...theme.typography.body1
 }))
 
-export { SlideBox, SlideText, NameText, RoleText};
+const NavBox = styled(Box)(({theme})=>({
+    display: 'flex',
+    justifyContent: 'space-between',
+    position: 'absolute',
+    top: '56%',
+    width: '100%',
+    transform: 'translateY(-50%)',
+    zIndex: 10,
+}));
+
+const IconBox = styled(IconButton)(({ theme }) => ({
+    backgroundColor:" #11423F",
+    borderRadius: "50%",
+    cursor: 'pointer',
+    height: "50px",
+    width: "50px",
+    marginLeft: "30px",
+    marginRight: "30px",
+    color: "white",
+    '&:hover': {
+        backgroundColor: '#11423F',
+    }
+}));
+
+export { MainBox, Heading, SlideBox, SlideText, NameText, RoleText,NavBox, IconBox};

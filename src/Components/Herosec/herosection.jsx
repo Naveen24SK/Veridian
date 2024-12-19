@@ -37,6 +37,7 @@ const rect = {
     alignItems: 'center',
     justifyContent: 'center',
     color: '#FFFFFF',
+    marginBottom: '50px',
 };
 
 export default Hero;

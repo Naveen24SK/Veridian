@@ -3,30 +3,33 @@ import { StyledAppBar, StyledBox, StyledButton, StyledContainer } from './topbar
 import Toolbar from '@mui/material/Toolbar';
 import Logo from '../../assets/logo.svg';
 
-const pages = ['Home', 'About Us', 'Our Team', 'Investment Approach', 'Contact us'];
+const pages = ['Home', 'About Us', 'Our Team', 'Investment Approach', 'Contact Us'];
 
 function Topbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
     <StyledAppBar position="static">
       <StyledContainer>
         <Toolbar disableGutters>
-          <img src={Logo} alt="Logo" style={{ marginRight: '20px' }} />
+          <img src={Logo} alt="Logo" style={{ marginLeft: '-80px' }} />
           <StyledBox>
-            {pages.map((page) => (
-              <StyledButton key={page} onClick={handleCloseNavMenu}>
-                {page}
-              </StyledButton>
-            ))}
+            {pages.map((page) => {
+              const id = page.toLowerCase().replace(/\s+/g, '');
+              return (
+                <StyledButton
+                  key={page}
+                  onClick={() => handleScroll(id)}
+                >
+                  {page}
+                </StyledButton>
+              );
+            })}
           </StyledBox>
         </Toolbar>
       </StyledContainer>
