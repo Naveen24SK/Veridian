@@ -8,7 +8,7 @@ import excel from "../../assets/exce.svg";
 import sustain from "../../assets/sust.svg";
 import init from "../../assets/init.svg";
 import integ from "../../assets/integ.svg";
-import grad from "../../assets/pattern.svg";
+import grad from "../../assets/Pattern.svg";
 import Investment from "../Investment/investment";
 // import OurTeam from "../OurTeam/Team";
 import Slide from "../../Components/OurTeam/SlideCard";
@@ -96,7 +96,7 @@ Veridian's expertise is delivered with a responsible approach to our business, o
 
         {gridItems.slice(1).map((item) => (
           <Grid item xs={12} md={6} key={item.id} display={"flex"} justifyContent={"center"}>
-              <FeatureCard display="flex" flexDirection="row" alignItems="center">
+              <FeatureCard >
                 <Box>
                 <SectionTitle>
                   {item.title}

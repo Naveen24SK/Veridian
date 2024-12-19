@@ -14,8 +14,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
     '.grad': {
         position: 'absolute',
         maxWidth: '100%',
-        zIndex: 1,
-        top: 745
+        top: 758
     },
 }));
 
